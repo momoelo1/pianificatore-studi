@@ -1,0 +1,377 @@
+/* ── Layout ── */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-family: system-ui, sans-serif;
+}
+
+.auth-container {
+  max-width: 440px;
+  margin: 5vh auto 0;
+  padding: 2rem 2.25rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h1 {
+  margin: 0 0 1.5rem;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #111827;
+}
+
+/* ── Header ── */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-row h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #111827;
+}
+
+.welcome {
+  margin: 0 0 2rem;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* ── Section titles ── */
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #374151;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.add-session-section {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Form ── */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+@media (max-width: 520px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.01em;
+}
+
+input,
+select {
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 0.95rem;
+  background: #fff;
+  color: #111827;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+input[type="file"] {
+  cursor: pointer;
+  padding: 0.45rem 0.75rem;
+  color: #6b7280;
+}
+
+/* ── Buttons ── */
+button {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+  transition: background 0.15s, opacity 0.15s, box-shadow 0.15s;
+}
+
+button:hover:not(:disabled) {
+  background: #1d4ed8;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #fff;
+  color: #374151;
+  border-color: #d1d5db;
+}
+
+button.secondary:hover:not(:disabled) {
+  background: #f3f4f6;
+  box-shadow: none;
+}
+
+button.danger {
+  background: #dc2626;
+  border-color: #dc2626;
+}
+
+button.danger:hover:not(:disabled) {
+  background: #b91c1c;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+}
+
+button.success {
+  background: #16a34a;
+  border-color: #16a34a;
+}
+
+button.success:hover:not(:disabled) {
+  background: #15803d;
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25);
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  padding: 0;
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.link-btn:hover {
+  color: #1d4ed8;
+  background: none;
+  box-shadow: none;
+}
+
+/* ── Inline messages ── */
+.form-message {
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.form-message.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.form-message.success {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+/* ── Auth switch ── */
+.auth-switch {
+  text-align: center;
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ── Session list ── */
+.session-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+/* ── Session card ── */
+.session-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.session-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.session-card.completed {
+  opacity: 0.6;
+  background: #f9fafb;
+}
+
+.session-card.past-due:not(.completed) {
+  border-color: #fca5a5;
+  background: #fff9f9;
+}
+
+.session-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.session-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #111827;
+}
+
+/* ── Priority badges ── */
+.priority-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.priority-badge.alta {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.priority-badge.media {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.priority-badge.bassa {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+/* ── Session card body ── */
+.session-card p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.session-card p strong {
+  color: #374151;
+}
+
+.overdue-text {
+  color: #dc2626 !important;
+}
+
+.overdue-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+}
+
+.status-done {
+  color: #16a34a;
+  font-weight: 600;
+}
+
+.status-progress {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.session-card a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.session-card a:hover {
+  text-decoration: underline;
+}
+
+/* ── Buttons row ── */
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.875rem;
+  flex-wrap: wrap;
+}
+
+.buttons button {
+  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+}
+
+.confirm-text {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* ── Empty / loading state ── */
+.empty-state {
+  color: #9ca3af;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-size: 0.95rem;
+}
+
+.loading-state {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
